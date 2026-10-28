@@ -10,11 +10,11 @@ interface SEOHeadProps {
 }
 
 export const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'SarkariPulse - Government Job Alerts, Admit Card & Daily News',
-  description = 'Real-time government job vacancies, UP Police 32,679, RSMSSB CET 6,850, RRB NTPC, SSC CGL 2026, admit cards, exam news, syllabus summaries & AI eligibility checker.',
+  title = 'समाचारपल्स (SamacharPulse) - ताज़ा समाचार, देश-विदेश व ब्रेकिंग न्यूज़ ब्लॉग',
+  description = 'समाचारपल्स (SamacharPulse): देश, विदेश, राजनीति, अर्थव्यवस्था और समसामयिकी के प्रामाणिक समाचार व संपादकीय विश्लेषण। पढ़ें निष्पक्ष एवं लाइव ब्रेकिंग न्यूज़।',
   canonicalUrl,
   ogType = 'website',
-  ogImage = 'https://sarkaripulse.vercel.app/og-image.png',
+  ogImage = 'https://samacharpulse.vercel.app/og-image.png',
   jsonLd,
 }) => {
   useEffect(() => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BlogPost } from '../types';
 import { ensureOfficialWebsite } from '../utils/officialWebsiteHelper';
-import { Clock, Eye, ThumbsUp, ChevronRight, Sparkles, Flame, Tag, Globe, ExternalLink, ShieldCheck, Trash2 } from 'lucide-react';
+import { Eye, ThumbsUp } from 'lucide-react';
 
 interface BlogCardProps {
   post: BlogPost;

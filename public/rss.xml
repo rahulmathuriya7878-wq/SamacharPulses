@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>समाचारपल्स (SamacharPulse) - ताज़ा समाचार व संपादकीय बुलेटिन</title>
+    <link>https://samacharpulse.vercel.app/</link>
+    <description>देश, विदेश, राजनीति, अर्थव्यवस्था और समसामयिकी के प्रामाणिक समाचार व संपादकीय विश्लेषण।</description>
+    <language>hi-in</language>
+    <lastBuildDate>Wed, 28 Oct 2026 03:00:00 GMT</lastBuildDate>
+    <atom:link href="https://samacharpulse.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>पायलट कैप्टन स्मित मच्छर को UAE का सर्वोच्च नागरिक सम्मान, राष्ट्रपति ने गले लगाया: प्लेन क्रैश कराने की आतंकी साजिश नाकाम कर 180 जानें बचाईं; दुबई प्रिंस बोले- "वे हमारी पहचान हैं"</title>
+      <link>https://samacharpulse.vercel.app/indian-pilot-captain-smit-machchhar-uae-president-honor-plane-crash-foiled</link>
+      <guid isPermaLink="true">https://samacharpulse.vercel.app/indian-pilot-captain-smit-machchhar-uae-president-honor-plane-crash-foiled</guid>
+      <pubDate>Wed, 28 Oct 2026 04:00:00 GMT</pubDate>
+      <description>फ्लाईदुबई के विमान में सह-पायलट ने कुल्हाड़ी से जानलेवा हमला कर क्रैश कराने की साजिश रची थी; लहूलुहान होकर भी भारतीय कैप्टन ने 180 यात्रियों की जान बचाई, UAE के राष्ट्रपति ने गले लगाकर दिया 'ऑर्डर ऑफ जायद' सम्मान।</description>
+      <category>विदेश न्यूज़</category>
+    </item>
+
+    <item>
+      <title>ब्राजील में राष्ट्रपति चुनाव हारने वाले बोल्सोनारो अमेरिका भागे: पत्नी और दो बेटियां भी साथ; सरकार ने पासपोर्ट रद्द किया</title>
+      <link>https://samacharpulse.vercel.app/brazil-election-bolsonaro-us-passport-cancellation</link>
+      <guid isPermaLink="true">https://samacharpulse.vercel.app/brazil-election-bolsonaro-us-passport-cancellation</guid>
+      <pubDate>Wed, 28 Oct 2026 03:00:00 GMT</pubDate>
+      <description>जैयर बोल्सोनारो के देश छोड़ने और कानूनी शिकंजे कसने के बाद ब्राजील की राजनीति में भूचाल। संघीय सरकार और सुप्रीम कोर्ट के आदेश के बाद पासपोर्ट रद्द किया गया।</description>
+      <category>विदेश न्यूज़</category>
+    </item>
+
+    <item>
+      <title>मालदीव के राष्ट्रपति मुइज्जू ने पाकिस्तान के साथ किए कई अहम समझौते: भारत की सुरक्षा चिंताओं के बीच बड़ी कूटनीतिक हलचल</title>
+      <link>https://samacharpulse.vercel.app/maldives-president-muizzu-pakistan-agreements-india-warning</link>
+      <guid isPermaLink="true">https://samacharpulse.vercel.app/maldives-president-muizzu-pakistan-agreements-india-warning</guid>
+      <pubDate>Wed, 28 Oct 2026 02:00:00 GMT</pubDate>
+      <description>मालदीव और पाकिस्तान के बीच रक्षा और व्यापार समझौतों पर हस्ताक्षर, भारत की सामरिक निगरानी और कूटनीतिक प्रभाव का विश्लेषण।</description>
+      <category>विदेश न्यूज़</category>
+    </item>
+
+    <item>
+      <title>इजराइल संसद (नेसेट) चुनाव 2026: बेंजामिन नेतन्याहू की सत्ता और मध्य पूर्व शांति समझौते पर ऐतिहासिक जनादेश</title>
+      <link>https://samacharpulse.vercel.app/israel-election-knesset-2026-analysis</link>
+      <guid isPermaLink="true">https://samacharpulse.vercel.app/israel-election-knesset-2026-analysis</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <description>इजराइल नेसेट चुनाव 2026 के ताजा समीकरण, गठबंधन सरकार की चुनौतियां और पश्चिम एशिया शांति प्रक्रिया पर विस्तृत रिपोर्ट।</description>
+      <category>विदेश न्यूज़</category>
+    </item>
+  </channel>
+</rss>

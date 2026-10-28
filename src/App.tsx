@@ -4,19 +4,16 @@ import { INITIAL_NEWS_ITEMS } from './data/newsData';
 import { INITIAL_BLOG_POSTS } from './data/blogData';
 
 import { Header } from './components/Header';
-import { FloatingShareButton } from './components/FloatingShareButton';
 import { BlogCard } from './components/BlogCard';
 import { BlogDetailView } from './components/BlogDetailView';
 import { MobileMenuDrawer } from './components/MobileMenuDrawer';
 import { PolicyModal } from './components/PolicyModal';
-import { SearchModal } from './components/SearchModal';
 import { FastUpdatesGrid } from './components/FastUpdatesGrid';
 import { SEOHead } from './components/SEOHead';
 import { UrlInspectionModal } from './components/UrlInspectionModal';
 import { LiveNewsTicker } from './components/LiveNewsTicker';
 
 import {
-  Search,
   Twitter,
   Facebook,
   Instagram,
@@ -62,12 +59,9 @@ export default function App() {
     setIsDarkMode((prev) => !prev);
   };
 
-  // Search & Filters
-  const [blogSearchQuery, setBlogSearchQuery] = useState('');
+  // Category & Sector Filters
   const [selectedBlogCategory, setSelectedBlogCategory] = useState<string>('All Blogs');
   const [selectedSectorFilter, setSelectedSectorFilter] = useState<JobCategory | 'All Sectors'>('All Sectors');
-
-  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const [isUrlInspectOpen, setIsUrlInspectOpen] = useState(false);
 
   // Initialize URL Path Route
@@ -186,16 +180,9 @@ export default function App() {
     return blogPosts.filter((post) => {
       if (selectedBlogCategory !== 'All Blogs' && post.category !== selectedBlogCategory) return false;
       if (selectedSectorFilter !== 'All Sectors' && post.jobCategory !== selectedSectorFilter) return false;
-      if (blogSearchQuery.trim()) {
-        const q = blogSearchQuery.toLowerCase();
-        const matchesTitle = post.title.toLowerCase().includes(q);
-        const matchesSubtitle = post.subtitle.toLowerCase().includes(q);
-        const matchesTags = post.tags.some((t) => t.toLowerCase().includes(q));
-        if (!matchesTitle && !matchesSubtitle && !matchesTags) return false;
-      }
       return true;
     });
-  }, [blogPosts, selectedBlogCategory, selectedSectorFilter, blogSearchQuery]);
+  }, [blogPosts, selectedBlogCategory, selectedSectorFilter]);
 
   const featuredHeroBlog = useMemo(() => {
     return blogPosts.find((p) => p.isFeatured) || blogPosts[0];
@@ -271,44 +258,33 @@ export default function App() {
           <div className="space-y-6">
             <LiveNewsTicker newsItems={news} onRefresh={handleSyncLiveBulletins} />
 
-            {/* Search & Category Filter Controls */}
-            <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="relative flex-1 w-full">
-                  <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-                  <input
-                    type="text"
-                    value={blogSearchQuery}
-                    onChange={(e) => setBlogSearchQuery(e.target.value)}
-                    placeholder="Search news blog articles, cutoff guides, exam strategy..."
-                    className="w-full pl-10 pr-4 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/80"
-                  />
+            {/* Category Filter Tabs & Trending Tags */}
+            <div className="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+              <div className="flex items-center justify-between gap-3 flex-wrap">
+                <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-xs">
+                  {BLOG_CATEGORIES.map((cat) => (
+                    <button
+                      key={`cat-tab-${cat}`}
+                      onClick={() => setSelectedBlogCategory(cat)}
+                      className={`px-3.5 py-1.5 text-xs font-bold rounded-xl transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
+                        selectedBlogCategory === cat
+                          ? 'bg-emerald-600 text-white shadow-xs'
+                          : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  ))}
                 </div>
+
                 {selectedSectorFilter !== 'All Sectors' && (
                   <button
                     onClick={() => setSelectedSectorFilter('All Sectors')}
-                    className="px-3 py-2 text-xs font-bold bg-emerald-50 text-emerald-800 rounded-xl border border-emerald-200 shrink-0 inline-flex items-center gap-1 cursor-pointer"
+                    className="px-3 py-1.5 text-xs font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 rounded-xl border border-emerald-200 dark:border-emerald-800 shrink-0 inline-flex items-center gap-1 cursor-pointer"
                   >
-                    <span>Sector: {selectedSectorFilter} ✕</span>
+                    <span>सेक्टर: {selectedSectorFilter} ✕</span>
                   </button>
                 )}
-              </div>
-
-              {/* Blog Category Tabs */}
-              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-xs">
-                {BLOG_CATEGORIES.map((cat) => (
-                  <button
-                    key={`cat-tab-${cat}`}
-                    onClick={() => setSelectedBlogCategory(cat)}
-                    className={`px-3 py-1.5 text-xs font-bold rounded-xl transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
-                      selectedBlogCategory === cat
-                        ? 'bg-emerald-600 text-white shadow-xs'
-                        : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                ))}
               </div>
             </div>
 
@@ -437,25 +413,11 @@ export default function App() {
         }}
       />
 
-      {/* Global Search Modal */}
-      <SearchModal
-        isOpen={isSearchModalOpen}
-        onClose={() => setIsSearchModalOpen(false)}
-        blogs={blogPosts}
-        onSelectBlog={(blog) => {
-          setSelectedBlog(blog);
-        }}
-      />
 
       <UrlInspectionModal
         isOpen={isUrlInspectOpen}
         onClose={() => setIsUrlInspectOpen(false)}
         initialSlug={selectedBlog ? selectedBlog.slug : ''}
-      />
-
-      <FloatingShareButton 
-        title="SamacharPulse News - Daily News & Editorial Blogs" 
-        text="Check out the latest news blogs and editorial insights on SamacharPulse." 
       />
     </div>
   );
