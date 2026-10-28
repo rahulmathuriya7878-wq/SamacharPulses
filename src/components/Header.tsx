@@ -4,8 +4,6 @@ import {
   ChevronDown,
   Sun,
   Moon,
-  Download,
-  Github,
 } from 'lucide-react';
 import { JobCategory } from '../types';
 
@@ -114,27 +112,6 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Right Action Area */}
         <div className="flex items-center gap-2 shrink-0">
-          <a
-            href="/samacharpulse-source.zip"
-            download="samacharpulse-source.zip"
-            className="p-2 sm:px-3 py-2 rounded-xl text-emerald-800 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 transition-colors border border-emerald-200 dark:border-emerald-800 flex items-center gap-1.5 font-extrabold text-xs shadow-xs"
-            title="पूरा कोड ZIP फ़ाइल डाउनलोड करें"
-          >
-            <Download className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-            <span className="hidden sm:inline">कोड डाउनलोड (ZIP)</span>
-          </a>
-
-          <a
-            href="https://github.com/rahulmath1911-bit/SamacharPulse"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2 sm:px-3 py-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer border border-slate-200 dark:border-slate-700 flex items-center gap-1.5 font-extrabold text-xs shadow-xs"
-            title="GitHub Repository (rahulmath1911-bit/SamacharPulse)"
-          >
-            <Github className="w-4 h-4 text-slate-800 dark:text-slate-100" />
-            <span className="hidden sm:inline">GitHub</span>
-          </a>
-
           <button
             onClick={onToggleDarkMode}
             className="p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer border border-slate-200 dark:border-slate-700"
