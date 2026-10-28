@@ -1,0 +1,6 @@
+{
+  "name": "SamacharPulse - News Blogs",
+  "description": "Professional news blogs and real-time news updates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
