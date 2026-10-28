@@ -11,6 +11,22 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Lead Story: Central Govt DA Hike 3% to 63% -->
+  <url>
+    <loc>https://samacharpulse.vercel.app/central-govt-employees-da-hike-3-percent-reaches-63-percent-48-lakh-employees-benefit</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>समाचारपल्स (SamacharPulse)</news:name>
+        <news:language>hi</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-28T04:30:00+05:30</news:publication_date>
+      <news:title>केंद्रीय कर्मचारियों और पेंशनर्स को दिवाली का बड़ा तोहफा: महंगाई भत्ता (DA) 3% बढ़कर 63% हुआ, 1.16 करोड़ परिवारों को 3 महीने के एरियर के साथ मिलेगा लाभ</news:title>
+    </news:news>
+  </url>
+
   <!-- Breaking Story: Captain Smit Machchhar UAE Honor -->
   <url>
     <loc>https://samacharpulse.vercel.app/indian-pilot-captain-smit-machchhar-uae-president-honor-plane-crash-foiled</loc>

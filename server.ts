@@ -44,6 +44,14 @@ const getBaseUrl = (req: express.Request): string => {
 // Static & Dynamic Posts registry for Sitemap, RSS Feed and Head Injection
 const KNOWN_SEO_POSTS = [
   {
+    slug: 'central-govt-employees-da-hike-3-percent-reaches-63-percent-48-lakh-employees-benefit',
+    title: 'केंद्रीय कर्मचारियों और पेंशनर्स को दिवाली का बड़ा तोहफा: महंगाई भत्ता (DA) 3% बढ़कर 63% हुआ, 1.16 करोड़ परिवारों को 3 महीने के एरियर के साथ मिलेगा लाभ',
+    description: 'केंद्रीय कैबिनेट का ऐतिहासिक फैसला: 48 लाख सरकारी कर्मचारियों और 68 लाख पेंशनभोगियों के वेतन व पेंशन में जबरदस्त उछाल; नई दरें 1 जुलाई 2026 से प्रभावी, जानिए कितनी बढ़ेगी इन-हैंड सैलरी।',
+    category: 'देश न्यूज़',
+    pubDate: new Date('2026-10-28T04:30:00Z').toUTCString(),
+    lastmod: '2026-10-28',
+  },
+  {
     slug: 'indian-pilot-captain-smit-machchhar-uae-president-honor-plane-crash-foiled',
     title: 'पायलट कैप्टन स्मित मच्छर को UAE का सर्वोच्च नागरिक सम्मान, राष्ट्रपति ने गले लगाया: प्लेन क्रैश कराने की आतंकी साजिश नाकाम कर 180 जानें बचाईं; दुबई प्रिंस बोले- "वे हमारी पहचान हैं"',
     description: 'फ्लाईदुबई के विमान में सह-पायलट ने कुल्हाड़ी से जानलेवा हमला कर क्रैश कराने की साजिश रची थी; लहूलुहान होकर भी भारतीय कैप्टन ने 180 यात्रियों की जान बचाई, UAE के राष्ट्रपति ने दिया ऑर्डर ऑफ जायद।',
