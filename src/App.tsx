@@ -18,7 +18,6 @@ import {
   Facebook,
   Instagram,
   Send,
-  Github,
 } from 'lucide-react';
 
 const BLOG_CATEGORIES: string[] = [
@@ -345,15 +344,6 @@ export default function App() {
             <div className="flex items-center gap-2">
               <span className="font-semibold text-slate-400">आधिकारिक सोशल मीडिया:</span>
               <div className="flex items-center gap-2">
-                <a
-                  href="https://github.com/rahulmath1911-bit/SamacharPulse"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-1.5 bg-slate-800 hover:bg-black text-slate-200 rounded-lg transition-colors cursor-pointer"
-                  title="GitHub Repository (rahulmath1911-bit/SamacharPulse)"
-                >
-                  <Github className="w-3.5 h-3.5 text-white" />
-                </a>
                 <a
                   href="https://twitter.com"
                   target="_blank"
